@@ -1,0 +1,117 @@
+$primaryColor: #4527a4;
+
+.wp-block-b-blocks-pin-creator {
+  box-sizing: border-box;
+  * { box-sizing: border-box}
+
+  .popupWrapper {
+    position: absolute;
+    top: 100px;
+    background: rgb(0 0 0 / 39%);;
+    padding: 10px;
+    z-index: 10;
+    margin-left: 5px;
+    border-radius: 5px;
+    width: 385px;
+    border: none;
+  
+    // input {
+    //   width: 237px;
+    //   padding: 10px;
+    //   margin-bottom: 5px;
+    //   border: none;
+    //   border-radius: 3px;
+    //   background: rgb(0 0 0 / 55%);
+    //   color: #fff;
+    // }
+  
+   .saveBtn{
+    border-radius: 5px; 
+    padding: 3px 15px;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1b7c25;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    margin-right: 5px;
+    border: none;
+    color: #fff;
+    font-family: sans-serif;
+   }
+   .closeBtn{
+    border-radius: 5px; 
+    padding: 3px 10px;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #b81515;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+   }
+  
+  }
+  .add-hotspot-icon{
+    color : white;
+    font-size : 24px;
+    background : #1b7c25;
+    border-radius : 50%;
+    width : 40px;
+    height : 40px;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    cursor : pointer;
+  }
+  .hotspotWrapper {
+    width: 250px;
+    height: 500px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #ccc;
+  
+    .header {
+      background-color: #3f51b5;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 16px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+  
+    .btnGroup {
+      flex-grow: 1;
+      overflow-y: auto;
+      padding: 20px;
+  
+      .infoButton {
+        display: block;
+        width: 100%;
+        background: none;
+        border: none;
+        color: #1a237e;
+        font-size: 17px;
+        margin: 20px 0;
+        cursor: pointer;
+        text-align: center;
+        padding: 10px;
+        &:hover {
+          background-color: #ccc;
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+  
+  .icon {
+    font-style: inherit;
+  }
+}
+
+
+
+

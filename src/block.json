@@ -1,0 +1,98 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "b-blocks/pin-creator",
+	"version": "1.0.0",
+	"title": "Pin Creator",
+	"category": "widgets",
+	"description": "Short description of the Pin Creator",
+	"keywords": ["Pin Creator"],
+	"textdomain": "b-blocks",
+	"attributes": {
+		"align":{
+			"type": "string",
+			"default": "wide"
+		},
+		"alignment": {
+			"type": "string",
+			"default": "center"
+		},
+		"tour_360": {
+			"type": "array",
+			"default": [
+				{
+				"tour_id": "house",
+				"tour_img": "",
+				"tourTitleAuthor": true,
+				"title": "Spring House or Dairy",
+				"author": "bPlugins",
+				"tour_hotSpot": true,
+				"hotSpot_txt": "Spring House",
+				"target_id": "",
+				"default_data":false
+				}
+			]
+    	},
+		"options": {
+			"type": "object",
+			"default": {
+				"isRotate": true,
+				"autoRotateSpeed": 1,
+				"autoRotateInactivityDelay": 3000,
+				"hideDefaultCtrl": false,
+				"initialView": false,
+				"initialViewPosition":{
+				"pitch": 0,
+				"yaw": 0,
+				"hfov": 120
+				},
+				"autoLoad": true,
+				"draggable": true,
+				"compass": false,
+				"mouseZoom": true,
+				"disableKeyboardCtrl": false,
+				"doubleClickZoom": true
+			}
+		},
+		"hotspotData":{
+			"type": "array",
+			"default": []
+		},
+		"layout": {
+		"type": "object",
+		"default": {
+			"alignSl": {
+			"desktop": "center",
+			"tablet": "center",
+			"mobile": "center"
+			},
+			"width": {
+			"desktop": "100%",
+			"tablet": "100%",
+			"mobile": "100%"
+			},
+			"height": {
+			"desktop": "320px",
+			"tablet": "300px",
+			"mobile": "250px"
+			}
+		}
+		}
+	},
+	"supports": {
+		"align": [
+			"wide",
+			"full"
+		],
+		"html": false
+	},
+	"example": {
+		"attributes": {}
+	},
+
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./view.css",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}
