@@ -35,6 +35,48 @@
         }
       ]
     },
+    "scenes": {
+      "type": "array",
+      "default": [
+        {
+          "tour_id": "circle",
+          "title": "Mason Circle",
+          "hfov": 110,
+          "pitch": -3,
+          "yaw": 117,
+          "type": "equirectangular",
+          "panorama": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Panorama_of_the_courtyard_of_the_Great_Mosque_of_Kairouan.jpg",
+          "hotSpots": [
+            {
+              "pitch": -2.1,
+              "yaw": 132.9,
+              "type": "scene",
+              "text": "Spring House or Dairy",
+              "sceneId": "house"
+            }
+          ]
+        },
+        {
+          "tour_id": "house",
+          "title": "Spring House or Dairy",
+          "hfov": 110,
+          "yaw": 5,
+          "type": "equirectangular",
+          "panorama": "https://plus.unsplash.com/premium_photo-1661887713388-6f093435b59a?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGFub3JhbWljfGVufDB8fDB8fHww",
+          "hotSpots": [
+            {
+              "pitch": -0.6,
+              "yaw": 37.1,
+              "type": "scene",
+              "text": "Mason Circle",
+              "sceneId": "circle",
+              "targetYaw": -23,
+              "targetPitch": 2
+            }
+          ]
+        }
+      ]
+    },
     "options": {
       "type": "object",
       "default": {

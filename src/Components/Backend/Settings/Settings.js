@@ -15,7 +15,7 @@ import Style from "./Style/Style";
 import { BBlocksAds } from "../../../../../bpl-tools/Components";
 import { AboutProModal } from "../../../../../bpl-tools/ProControls";
 
-const Settings = ({ attributes, setAttributes, device, isPremium, siteURL }) => {
+const Settings = ({ attributes, setAttributes, device, isPremium, siteURL, setCurrentScene }) => {
 	const { tour_360 = [], layout } = attributes;
 	const { alignSl } = layout;
 
@@ -28,7 +28,7 @@ const Settings = ({ attributes, setAttributes, device, isPremium, siteURL }) => 
 		setIsProModalOpen,
 	};
 
-	const props = { attributes, setAttributes, device, premiumProps };
+	const props = { attributes, setAttributes, device, premiumProps, setCurrentScene };
 
 	return (
 		<>

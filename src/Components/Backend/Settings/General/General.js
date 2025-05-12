@@ -3,14 +3,15 @@ import { PanelBody,
   //  RangeControl
    } from "@wordpress/components";
 import { __ } from "@wordpress/i18n";
+import { useEffect, useState } from "react";
 import { ItemsPanel } from "../../../../../../bpl-tools/Components";
 import Item from "../Panel/Item";
 // import { updateData } from "../../../../../../bpl-tools/utils/functions";
 // import { BControlPro } from "../../../../../../bpl-tools/ProControls";
 
 
-const General = ({ attributes, setAttributes, premiumProps }) => {
-  // const { options } = attributes;
+const General = ({ attributes, setAttributes, premiumProps, setCurrentScene }) => {
+  const { scenes } = attributes;
   // const {
   //   isRotate,
   //   autoRotateSpeed,
@@ -25,9 +26,47 @@ const General = ({ attributes, setAttributes, premiumProps }) => {
   //   doubleClickZoom,
   // } = options || {};
 
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  useEffect(() => {
+      
+    scenes[activeIndex] && setCurrentScene(scenes[activeIndex])
+  }, [activeIndex])
+
   return (
     <>
       <PanelBody className="bPlPanelBody" title={__("Tours", "panorama")}>
+        <ItemsPanel   
+          {...{ attributes, setAttributes, premiumProps, activeIndex, setActiveIndex }}
+          arrKey="scenes"
+          newItem={{
+            "tour_id": "circle",
+            "title": "Mason Circle",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 117,
+            "type": "equirectangular",
+            "panorama": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Panorama_of_the_courtyard_of_the_Great_Mosque_of_Kairouan.jpg",
+            "hotSpots": [
+              {
+                "pitch": -2.1,
+                "yaw": 132.9,
+                "type": "scene",
+                "text": "Spring House or Dairy",
+                "sceneId": "house"
+              }
+            ]
+          }}
+          ItemSettings={Item}
+          itemLabel="Scene"
+          design="sortable"
+        />
+      </PanelBody>
+
+
+
+      {/* tour_360 */}
+      {/* <PanelBody className="bPlPanelBody" title={__("Tours", "panorama")}>
         <ItemsPanel   
           {...{ attributes, setAttributes, premiumProps }}
           arrKey="tour_360"
@@ -46,7 +85,7 @@ const General = ({ attributes, setAttributes, premiumProps }) => {
           itemLabel="Tour"
           design="sortable"
         />
-      </PanelBody>
+      </PanelBody> */}
 
       {/* <PanelBody className="bPlPanelBody" title={__("Options", "panorama")}>
         <ToggleControl
@@ -199,6 +238,7 @@ const General = ({ attributes, setAttributes, premiumProps }) => {
           {...premiumProps}
         />
       </PanelBody> */}
+
     </>
   );
 };
