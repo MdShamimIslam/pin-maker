@@ -8,12 +8,10 @@ const PopupWrapper = ({scenes,setAttributes,popupData,setPopupData,hotspotData,i
         <div className="popupWrapper">
             <div className='selectSceneOrInfo'> What do you want to add in this point? </div>
             <TypeSelectionButtons {...{ popupData,setPopupData }} />
-
+            
             {popupData.type === 'info' &&  <InfoHotspotInput {...{ popupData,setPopupData }} /> }
 
-            {popupData.type === 'scene' && (
-                <SceneHotspotInput {...{ scenes, setAttributes, popupData, setPopupData, hotspotData, isDropdownOpen, setIsDropdownOpen, setTempHotspot }} />
-            )}
+            {popupData.type === 'scene' && ( <SceneHotspotInput {...{ scenes, setAttributes, popupData, setPopupData, hotspotData, isDropdownOpen, setIsDropdownOpen, setTempHotspot }} /> )}
 
             <SaveCancelButtons
                 onSave={handleSaveHotspot}

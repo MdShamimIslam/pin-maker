@@ -135,9 +135,16 @@
   font-size: 14px;
 }
 .wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .sceneWrap .sceneWrapChild .components-select-control__input.css-k4pu08.e1mv6sxx2 {
+  border-radius: inherit;
+  border-radius: 1px;
   width: 280px;
-  background: #151212;
+  background-color: #1e1e1e;
   color: white;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .sceneWrap .sceneWrapChild .css-1y1fx19.e1mv6sxx1 {
+  color: white;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .sceneWrap .sceneWrapChild .components-input-control__backdrop.css-ssb0uf.em5sgkm6 {
   border: none;
 }
 .wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .sceneWrap .sceneWrapChild .dropdown-container {
@@ -172,7 +179,7 @@
   top: 100%;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.91);
   border-radius: 3px;
   max-height: 187px;
   overflow-y: auto;

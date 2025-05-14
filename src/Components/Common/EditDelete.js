@@ -82,7 +82,7 @@ const EditDelete = ({ attributes, setAttributes, isBackend = false, currentScene
     return (
         <div className='tourViewerWrapper' >
             <div className='tourViewer' ref={panoRef} />
-            {popupData && <PopupWrapper {...{ scenes, setAttributes, hotspotData, popupData, setPopupData,isDropdownOpen, setIsDropdownOpen, setTempHotspot, handleSaveHotspot }} /> }
+            {popupData && <PopupWrapper {...{ scenes, setAttributes, hotspotData, popupData, setPopupData, isDropdownOpen, setIsDropdownOpen, setTempHotspot, handleSaveHotspot }} />}
         </div>
     );
 };

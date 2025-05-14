@@ -40,8 +40,8 @@
 					"tour_id": "circle",
 					"title": "Mason Circle",
 					"hfov": 110,
-					"pitch": -3,
-					"yaw": 117,
+					"pitch": 0,
+					"yaw": 5,
 					"type": "equirectangular",
 					"panorama": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Panorama_of_the_courtyard_of_the_Great_Mosque_of_Kairouan.jpg",
 					"hotSpots": [
