@@ -4,54 +4,298 @@ $primaryColor: #4527a4;
   box-sizing: border-box;
   * { box-sizing: border-box}
 
-  .popupWrapper {
-    position: absolute;
-    top: 100px;
-    background: rgb(0 0 0 / 39%);;
-    padding: 10px;
-    z-index: 10;
-    margin-left: 5px;
-    border-radius: 5px;
-    width: 385px;
-    border: none;
-  
-    // input {
-    //   width: 237px;
-    //   padding: 10px;
-    //   margin-bottom: 5px;
-    //   border: none;
-    //   border-radius: 3px;
-    //   background: rgb(0 0 0 / 55%);
-    //   color: #fff;
-    // }
-  
-   .saveBtn{
-    border-radius: 5px; 
-    padding: 3px 15px;
-    font-weight: 500;
-    font-family: inherit;
-    background-color: #1b7c25;
-    cursor: pointer;
-    transition: border-color 0.25s;
-    margin-right: 5px;
-    border: none;
-    color: #fff;
-    font-family: sans-serif;
-   }
-   .closeBtn{
-    border-radius: 5px; 
-    padding: 3px 10px;
-    font-weight: 500;
-    font-family: inherit;
-    background-color: #b81515;
-    cursor: pointer;
-    transition: border-color 0.25s;
-    border: none;
-    color: #fff;
-    font-family: monospace;
-   }
-  
+  .tourViewerWrapper{
+    position: relative;
+
+    .tourViewer{
+      width: 100%;
+      height: 500px;
+    }
+    .popupWrapper {
+      position: absolute;
+      top: 100px;
+      background: rgb(0 0 0 / 39%);;
+      padding: 10px;
+      z-index: 10;
+      margin-left: 5px;
+      border-radius: 5px;
+      width: 385px;
+      border: none;
+      .selectSceneOrInfo{
+        color: #fff;
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+      .infoAndSceneBtnWrap{
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+        .infoBtn{
+          flex: 1;
+          padding: 10px;
+          border-radius: 3px;
+          border: none;
+          color: #fff;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+          span{
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #fff;
+            border-radius: 50%;
+          }
+
+        }
+        .sceneBtn{
+          flex: 1;
+          padding: 10px;
+          border: none;
+          border-radius: 3px;
+          color: #fff;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+          span{
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #fff;
+            border-radius: 50%;
+          }
+        }
+      }
+      .infoWrap{
+        background: rgb(41 73 88 / 45%);
+        padding: 1px 15px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        h3{
+          color: #fff;
+          font-size: 18px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          font-family: sans-serif;
+        }
+        .infoChildWrap{
+          display: flex;
+          align-content: center;
+          gap: 5px;
+          margin-top: 20px;
+          .label{
+            color: #fff;
+            display: block;
+            margin-top: 5px;
+            font-size: 14px;
+          }
+          .infoInput{
+            width: 284px;
+            margin-bottom: 5px;
+            border: none;
+            border-radius: 3px;
+            background: rgb(0 0 0 / 55%);
+            color: #fff;
+          }
+          p{
+            color: #ccc;
+            font-size: 12px;
+            margin: 0;
+            margin-bottom: 10px;
+          }
+        }
+      }
+      .sceneWrap{
+        background: rgb(41 73 88 / 45%);
+        padding: 1px 15px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        .sceneWrapChild{
+          display: flex;
+          align-content: center;
+          gap: 5px;
+          margin-top: 5px;
+          .label{
+            color: #fff;
+            display: block;
+            margin-top: 5px;
+            font-size: 14px;
+          }
+          .components-select-control__input.css-k4pu08.e1mv6sxx2{
+            width: 280px;
+            background: #151212;
+            color: white;
+            border: none;
+          }
+          .dropdown-container {
+            position: relative;
+            width: 279px;
+
+            .sceneSlBtn {
+              width: 100%;
+              padding: 7px;
+              margin-bottom: 5px;
+              border: none;
+              border-radius: 3px;
+              background: rgb(0 0 0 / 55%);
+              color: #fff;
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              text-align: left;
+
+              .icon-container {
+                display: flex ;
+                gap: 5px;
+                font-size: 13px;
+              }
+
+              .dropdown-arrow {
+                margin-left: 10px;
+                font-size: 12px;
+              }
+            }
+
+            .dropdown-list {
+              position: absolute;
+              top: 100%;
+              left: 0;
+              width: 100%;
+              background: rgb(0 0 0 / 75%);
+              border-radius: 3px;
+              max-height: 187px;
+              overflow-y: auto;
+              z-index: 1000;
+
+              .dropdown-item {
+                width: 100%;
+                padding: 8px;
+                background: transparent;
+                border: none;
+                color: #fff;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                text-align: left;
+
+                &.active {
+                  background: rgb(30 144 255 / 30%);
+                }
+
+                .hotspot-icon {
+                  width: 20px;
+                  height: 20px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  border-radius: 50%;
+
+                  &.scene {
+                    border-color: #4CAF50;
+                    background-color: rgba(76, 175, 80, 0.1);
+                  }
+
+                  &.info {
+                    border-color: #2196F3;
+                    background-color: rgba(33, 150, 243, 0.1);
+                  }
+                }
+              }
+            }
+          }
+
+          .dropdown-label {
+            color: #ccc;
+            font-size: 12px;
+            margin: 0;
+            margin-bottom: 10px;
+          }
+        }
+
+        .input-container {
+          display: flex;
+          gap: 5px;
+          margin-top: 5px;
+
+          .input-label {
+            color: #fff;
+            display: block;
+            margin-top: 5px;
+            font-size: 14px;
+          }
+
+          .input-field {
+            width: 284px;
+            margin-bottom: 5px;
+            border: none;
+            border-radius: 3px;
+            background: rgb(0 0 0 / 55%);
+            color: #fff;
+          }
+
+          .input-description {
+            color: #ccc;
+            font-size: 12px;
+            margin: 0;
+            margin-bottom: 10px;
+          }
+        }
+
+      }
+      .hotspotAddFirst{
+        color: #fff; 
+        margin: 5px 0px 10px; 
+        font-size: 14px;
+        background: rgb(220 53 69 / 30%);
+        padding: 8px 12px;
+        border-radius: 3px;
+        width: 100%
+      }
+      .saveAndCancelWrap{
+        display: flex;
+        gap: 10px;
+        .saveBtn{
+          border-radius: 5px; 
+          padding: 3px 15px;
+          font-weight: 500;
+          font-family: inherit;
+          background-color: #1b7c25;
+          cursor: pointer;
+          transition: border-color 0.25s;
+          margin-right: 5px;
+          border: none;
+          color: #fff;
+          font-family: sans-serif;
+         }
+        .closeBtn{
+          border-radius: 5px; 
+          padding: 3px 10px;
+          font-weight: 500;
+          font-family: inherit;
+          background-color: #b81515;
+          cursor: pointer;
+          transition: border-color 0.25s;
+          border: none;
+          color: #fff;
+          font-family: monospace;
+         }
+      }
+      
+    }
+
   }
+  
   .add-hotspot-icon{
     color : white;
     font-size : 24px;
@@ -64,49 +308,44 @@ $primaryColor: #4527a4;
     align-items : center;
     cursor : pointer;
   }
-  .hotspotWrapper {
-    width: 250px;
-    height: 500px;
-    background: white;
-    display: flex;
-    flex-direction: column;
-    border-right: 1px solid #ccc;
+
+  .hotspot-tooltip {
+    position: relative;
+    cursor: pointer;
   
-    .header {
-      background-color: #3f51b5;
-      color: white;
-      font-size: 18px;
-      font-weight: bold;
-      padding: 16px;
-      text-align: center;
-      flex-shrink: 0;
-    }
+    .action-buttons {
+      position: absolute;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      top: 50%;
+      margin-top: 13px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 5px;
+      border-radius: 3px;
+      white-space: nowrap;
+      z-index: 1000;
   
-    .btnGroup {
-      flex-grow: 1;
-      overflow-y: auto;
-      padding: 20px;
-  
-      .infoButton {
-        display: block;
-        width: 100%;
+      .edit-btn,
+      .delete-btn {
         background: none;
         border: none;
-        color: #1a237e;
-        font-size: 17px;
-        margin: 20px 0;
+        color: white;
         cursor: pointer;
-        text-align: center;
-        padding: 10px;
-        &:hover {
-          background-color: #ccc;
-          padding: 10px;
-        }
+      }
+    }
+  
+    &:hover {
+      .action-buttons {
+        display: flex;
+        opacity: 1;
+        gap: 30px;
       }
     }
   }
 
-  
   .icon {
     font-style: inherit;
   }

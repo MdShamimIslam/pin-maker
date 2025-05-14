@@ -26,7 +26,7 @@ const General = ({ attributes, setAttributes, premiumProps, setCurrentScene }) =
   //   doubleClickZoom,
   // } = options || {};
 
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
       

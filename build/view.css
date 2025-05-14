@@ -7,7 +7,14 @@
 .wp-block-b-blocks-pin-creator * {
   box-sizing: border-box;
 }
-.wp-block-b-blocks-pin-creator .popupWrapper {
+.wp-block-b-blocks-pin-creator .tourViewerWrapper {
+  position: relative;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .tourViewer {
+  width: 100%;
+  height: 500px;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper {
   position: absolute;
   top: 100px;
   background: rgba(0, 0, 0, 0.39);
@@ -18,7 +25,236 @@
   width: 385px;
   border: none;
 }
-.wp-block-b-blocks-pin-creator .popupWrapper .saveBtn {
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .selectSceneOrInfo {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .infoAndSceneBtnWrap {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .infoAndSceneBtnWrap .infoBtn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 3px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .infoAndSceneBtnWrap .infoBtn span {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .infoAndSceneBtnWrap .sceneBtn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .infoAndSceneBtnWrap .sceneBtn span {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .infoWrap {
+  background: rgba(41, 73, 88, 0.45);
+  padding: 1px 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .infoWrap h3 {
+  color: #fff;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .infoWrap .infoChildWrap {
+  display: flex;
+  align-content: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .infoWrap .infoChildWrap .label {
+  color: #fff;
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .infoWrap .infoChildWrap .infoInput {
+  width: 284px;
+  margin-bottom: 5px;
+  border: none;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .infoWrap .infoChildWrap p {
+  color: #ccc;
+  font-size: 12px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .sceneWrap {
+  background: rgba(41, 73, 88, 0.45);
+  padding: 1px 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .sceneWrap .sceneWrapChild {
+  display: flex;
+  align-content: center;
+  gap: 5px;
+  margin-top: 5px;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .sceneWrap .sceneWrapChild .label {
+  color: #fff;
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .sceneWrap .sceneWrapChild .components-select-control__input.css-k4pu08.e1mv6sxx2 {
+  width: 280px;
+  background: #151212;
+  color: white;
+  border: none;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .sceneWrap .sceneWrapChild .dropdown-container {
+  position: relative;
+  width: 279px;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .sceneWrap .sceneWrapChild .dropdown-container .sceneSlBtn {
+  width: 100%;
+  padding: 7px;
+  margin-bottom: 5px;
+  border: none;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .sceneWrap .sceneWrapChild .dropdown-container .sceneSlBtn .icon-container {
+  display: flex;
+  gap: 5px;
+  font-size: 13px;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .sceneWrap .sceneWrapChild .dropdown-container .sceneSlBtn .dropdown-arrow {
+  margin-left: 10px;
+  font-size: 12px;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .sceneWrap .sceneWrapChild .dropdown-container .dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 3px;
+  max-height: 187px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .sceneWrap .sceneWrapChild .dropdown-container .dropdown-list .dropdown-item {
+  width: 100%;
+  padding: 8px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .sceneWrap .sceneWrapChild .dropdown-container .dropdown-list .dropdown-item.active {
+  background: rgba(30, 144, 255, 0.3);
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .sceneWrap .sceneWrapChild .dropdown-container .dropdown-list .dropdown-item .hotspot-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+  border-radius: 50%;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .sceneWrap .sceneWrapChild .dropdown-container .dropdown-list .dropdown-item .hotspot-icon.scene {
+  border-color: #4CAF50;
+  background-color: rgba(76, 175, 80, 0.1);
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .sceneWrap .sceneWrapChild .dropdown-container .dropdown-list .dropdown-item .hotspot-icon.info {
+  border-color: #2196F3;
+  background-color: rgba(33, 150, 243, 0.1);
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .sceneWrap .sceneWrapChild .dropdown-label {
+  color: #ccc;
+  font-size: 12px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .sceneWrap .input-container {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .sceneWrap .input-container .input-label {
+  color: #fff;
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .sceneWrap .input-container .input-field {
+  width: 284px;
+  margin-bottom: 5px;
+  border: none;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .sceneWrap .input-container .input-description {
+  color: #ccc;
+  font-size: 12px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .hotspotAddFirst {
+  color: #fff;
+  margin: 5px 0px 10px;
+  font-size: 14px;
+  background: rgba(220, 53, 69, 0.3);
+  padding: 8px 12px;
+  border-radius: 3px;
+  width: 100%;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .saveAndCancelWrap {
+  display: flex;
+  gap: 10px;
+}
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .saveAndCancelWrap .saveBtn {
   border-radius: 5px;
   padding: 3px 15px;
   font-weight: 500;
@@ -31,7 +267,7 @@
   color: #fff;
   font-family: sans-serif;
 }
-.wp-block-b-blocks-pin-creator .popupWrapper .closeBtn {
+.wp-block-b-blocks-pin-creator .tourViewerWrapper .popupWrapper .saveAndCancelWrap .closeBtn {
   border-radius: 5px;
   padding: 3px 10px;
   font-weight: 500;
@@ -55,43 +291,36 @@
   align-items: center;
   cursor: pointer;
 }
-.wp-block-b-blocks-pin-creator .hotspotWrapper {
-  width: 250px;
-  height: 500px;
-  background: white;
+.wp-block-b-blocks-pin-creator .hotspot-tooltip {
+  position: relative;
+  cursor: pointer;
+}
+.wp-block-b-blocks-pin-creator .hotspot-tooltip .action-buttons {
+  position: absolute;
+  opacity: 0;
   display: flex;
-  flex-direction: column;
-  border-right: 1px solid #ccc;
+  align-items: center;
+  gap: 30px;
+  top: 50%;
+  margin-top: 13px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px;
+  border-radius: 3px;
+  white-space: nowrap;
+  z-index: 1000;
 }
-.wp-block-b-blocks-pin-creator .hotspotWrapper .header {
-  background-color: #3f51b5;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 16px;
-  text-align: center;
-  flex-shrink: 0;
-}
-.wp-block-b-blocks-pin-creator .hotspotWrapper .btnGroup {
-  flex-grow: 1;
-  overflow-y: auto;
-  padding: 20px;
-}
-.wp-block-b-blocks-pin-creator .hotspotWrapper .btnGroup .infoButton {
-  display: block;
-  width: 100%;
+.wp-block-b-blocks-pin-creator .hotspot-tooltip .action-buttons .edit-btn,
+.wp-block-b-blocks-pin-creator .hotspot-tooltip .action-buttons .delete-btn {
   background: none;
   border: none;
-  color: #1a237e;
-  font-size: 17px;
-  margin: 20px 0;
+  color: white;
   cursor: pointer;
-  text-align: center;
-  padding: 10px;
 }
-.wp-block-b-blocks-pin-creator .hotspotWrapper .btnGroup .infoButton:hover {
-  background-color: #ccc;
-  padding: 10px;
+.wp-block-b-blocks-pin-creator .hotspot-tooltip:hover .action-buttons {
+  display: flex;
+  opacity: 1;
+  gap: 30px;
 }
 .wp-block-b-blocks-pin-creator .icon {
   font-style: inherit;
